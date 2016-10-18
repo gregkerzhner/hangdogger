@@ -1,0 +1,4 @@
+github "realm/realm-cocoa"
+github "ReactiveCocoa/ReactiveCocoa" ~> 4.0
+github "Swinject/Swinject" ~> 1.1.0
+github "Moya/Moya"

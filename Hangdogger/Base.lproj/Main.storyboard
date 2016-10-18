@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kyW-TQ-JlP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Item 1-->
+        <scene sceneID="Pao-xw-VoW">
+            <objects>
+                <viewController id="pma-qu-wi1" customClass="NewPooViewController" customModule="Hangdogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="FqB-Z9-SdQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbb-ta-1Dx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="227"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4bJ-ZU-fUS">
+            <objects>
+                <tabBarController id="kyW-TQ-JlP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="89F-os-bWR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pma-qu-wi1" kind="relationship" relationship="viewControllers" id="KUV-rZ-Fpx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIy-3o-rQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="558"/>
+        </scene>
+    </scenes>
+</document>
