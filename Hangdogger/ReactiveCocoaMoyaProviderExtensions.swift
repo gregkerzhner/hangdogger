@@ -18,7 +18,7 @@ extension ReactiveCocoaMoyaProvider {
     }
 
     //test that this does the basic request, etc
-    func objectRequest<T: BaseResult, U: FetchErrorResponse>(_ token: Target, resultType: T.Type, errorDescriptionType: U.Type) -> SignalProducer<T, FetchError> {
+    func objectRequest<T: FetcherResponse, U: FetchErrorResponse>(_ token: Target, resultType: T.Type, errorDescriptionType: U.Type) -> SignalProducer<FetcherResponse, FetchError> {
         return self.basicRequest(token: token).filterSuccessfulStatusCodes().mapObjectWithResponse(resultType).mapError({error -> FetchError in
             return self.mapError(error, errorDescriptionType: errorDescriptionType)
         })

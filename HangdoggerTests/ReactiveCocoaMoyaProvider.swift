@@ -32,7 +32,7 @@ class ReactiveCocoaMoyaProviderExtensionTests: QuickSpec {
         }
 
         it("Provides a result") {
-            var result: FecosystemsResult?
+            var result: FetcherResponse?
             provider.objectRequest(.fecosystems, resultType: FecosystemsResult.self, errorDescriptionType: FecosystemsErrorResponse.self).start { (event) -> Void in
                 switch event {
                 case .value(let response):
@@ -45,8 +45,7 @@ class ReactiveCocoaMoyaProviderExtensionTests: QuickSpec {
                 }
             }
 
-            expect(result?.fecosystems.count).toEventually(equal(2))
-            expect(result?.createdAt).toEventuallyNot(beNil())
+            expect(result?.syncableObjects.count).toEventually(equal(2))
         }
     }
 }

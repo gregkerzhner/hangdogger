@@ -16,8 +16,8 @@ import HTTPStatusCodes
 extension SignalProducerProtocol where Value == Moya.Response, Error == Moya.Error {
     /// Maps data received from the signal into an object which implements the Mappable protocol.
     /// If the conversion fails, the signal errors.
-    func mapObjectWithResponse<T: BaseResult>(_ type: T.Type) -> SignalProducer<T, Error> {
-        return producer.flatMap(.latest) { response -> SignalProducer<T, Error> in
+    func mapObjectWithResponse<T: FetcherResponse>(_ type: T.Type) -> SignalProducer<FetcherResponse, Error> {
+        return producer.flatMap(.latest) { response -> SignalProducer<FetcherResponse, Error> in
             return unwrapThrowable { try
                 response.mapObjectWithResponse(T.self)
             }

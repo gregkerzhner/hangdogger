@@ -12,7 +12,7 @@ import RealmSwift
 import Moya
 import ObjectMapper
 
-class FecosystemObjectFetcher: ObjectFetcher {
+class FecosystemObjectFetcher: Fetcher {
     fileprivate let backend: ReactiveCocoaMoyaProvider<HangdoggerBackend>
     fileprivate let params: [String: Any]?
 
@@ -22,12 +22,7 @@ class FecosystemObjectFetcher: ObjectFetcher {
     }
 
     //test that this calls object request with the right parameters
-    func fetch<T: BaseResult>(_ resultType: T.Type) -> SignalProducer<T, FetchError> {
-        return self.backend.objectRequest(.fecosystems, resultType: resultType, errorDescriptionType: FecosystemsErrorResponse.self)
-    }
-
-    var url: URL {
-        let endpoint = backend.endpoint(.fecosystems)
-        return endpoint.urlRequest.url!
+    func fetch(params: [String: Any]?) -> SignalProducer<FetcherResponse, FetchError> {
+        return self.backend.objectRequest(.fecosystems, resultType: FecosystemsResult.self, errorDescriptionType: FecosystemsErrorResponse.self)
     }
 }

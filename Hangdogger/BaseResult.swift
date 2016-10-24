@@ -12,9 +12,10 @@ import ObjectMapper
 import Realm
 import RealmSwift
 
-class BaseResult: Object, Mappable {
+class BaseResult: Object {
     dynamic var url: String? = ""
     dynamic var createdAt: Date?
+    
     //Impl. of Mappable protocol
 
     public required init() {

@@ -19,8 +19,8 @@ class FecosystemsObjectFetcherTests: QuickSpec {
         it("Fetches objects using an object request") {
             let backend = ReactiveCocoaMoyaProvider<HangdoggerBackend>(stubClosure: MoyaProvider.ImmediatelyStub)
             let fetcher = FecosystemObjectFetcher(backend: backend, params: nil)
-            var result: FecosystemsResult?
-            fetcher.fetch(FecosystemsResult.self).start { (event) -> Void in
+            var result: FetcherResponse?
+            fetcher.fetch(params: nil).start { (event) -> Void in
                 switch event {
                 case .value(let response):
                     result = response
@@ -32,7 +32,7 @@ class FecosystemsObjectFetcherTests: QuickSpec {
                 }
             }
 
-            expect(result?.fecosystems.count).toEventually(equal(2))
+            expect(result?.syncableObjects.count).toEventually(equal(2))
         }
 
         it("Handles general errors") {
@@ -45,7 +45,7 @@ class FecosystemsObjectFetcherTests: QuickSpec {
 
             var domain: String?
 
-            fetcher.fetch(FecosystemsResult.self).start { (event) -> Void in
+            fetcher.fetch(params: nil).start { (event) -> Void in
                 switch event {
                 case .value(let response):
                     break
@@ -79,7 +79,7 @@ class FecosystemsObjectFetcherTests: QuickSpec {
 
 
             var response: FetchErrorResponse?
-            fetcher.fetch(FecosystemsResult.self).start { (event) -> Void in
+            fetcher.fetch(params: nil).start { (event) -> Void in
                 switch event {
                 case .value(let response):
                     break
@@ -112,7 +112,7 @@ class FecosystemsObjectFetcherTests: QuickSpec {
 
 
             var response: FetchErrorResponse?
-            fetcher.fetch(FecosystemsResult.self).start { (event) -> Void in
+            fetcher.fetch(params: nil).start { (event) -> Void in
                 switch event {
                 case .value(let response):
                     break

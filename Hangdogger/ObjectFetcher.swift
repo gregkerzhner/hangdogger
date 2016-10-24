@@ -20,6 +20,5 @@ enum FetchError: Error {
 
 
 protocol ObjectFetcher {
-    func fetch<T: BaseResult>(_ resultType: T.Type) -> SignalProducer<T, FetchError>
-    var url: URL {get}
+    func fetch(params: [String: AnyObject]?) -> SignalProducer<FetcherResponse, FetchError>
 }

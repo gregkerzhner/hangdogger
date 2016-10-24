@@ -13,6 +13,12 @@ import Swinject
 import Realm
 import ObjectMapper
 
+enum SyncError: Error {
+    case fetchingError(FetchError)
+    case saveError(Error)
+}
+
+/*
 protocol ObjectSyncer {
     func sync<T: BaseResult>(_ resultType: T.Type, fetcher: ObjectFetcher) -> SignalProducer<T, SyncError>
 }
@@ -31,7 +37,7 @@ class ObjectSyncerImpl: ObjectSyncer {
     }
 
     func sync<T: BaseResult>(_ resultType: T.Type, fetcher: ObjectFetcher) -> SignalProducer<T, SyncError> {
-        return fetcher.fetch(resultType).mapError { error -> SyncError in
+        return fetcher.fetch(params: nil).mapError { error -> SyncError in
             return SyncError.fetchingError(error)
         }.saveOne(objectSaver)
     }
@@ -53,4 +59,4 @@ extension SignalProducerProtocol where Value: Mappable, Error == SyncError {
     }
 
 }
-
+*/

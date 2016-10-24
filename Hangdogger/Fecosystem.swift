@@ -10,9 +10,10 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 // MARK: Initializer and Properties
-class Fecosystem: Object, Mappable {
+class Fecosystem: Object, Mappable, SyncableObject {
     dynamic var id = 0
     dynamic var name: String!
+    dynamic var revision: Int = -1
 
     //Impl. of Mappable protocol
     required convenience init?(map: Map) {

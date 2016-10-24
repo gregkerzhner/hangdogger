@@ -14,29 +14,21 @@ import RealmSwift
 extension SwinjectStoryboard {
     class func setup() {
         defaultContainer.register(NewPooViewModel.self) { r in
-            let syncer = r.resolve(ObjectSyncer.self)
-            let model = NewPooViewModelImp(syncer: syncer!)
+            let model = NewPooViewModelImp()
 
             return model
         }
 
+        /*
         defaultContainer.register(ObjectFetcher.self, name: "FecosystemsObjectFetcher") {(r, argument: [String: Any]?) in
             let backend = r.resolve(ReactiveCocoaMoyaProvider<HangdoggerBackend>.self)!
             return FecosystemObjectFetcher(backend: backend, params: argument)
         }
-
+        */
         defaultContainer.register(ObjectSaver.self) { r in
             let realm = r.resolve(Realm.self)!
             return ObjectSaverImpl(realm: realm)
         }
-
-
-        defaultContainer.register(ObjectSyncer.self) { r in
-            let saver = r.resolve(ObjectSaver.self)!
-
-            return ObjectSyncerImpl(objectSaver: saver)
-        }
-
 
 
         defaultContainer.register(ReactiveCocoaMoyaProvider<HangdoggerBackend>.self) { _ in

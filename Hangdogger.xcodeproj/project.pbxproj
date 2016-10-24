@@ -14,8 +14,6 @@
 		2D0F90EF1D8D493700D28D57 /* ObjectFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F90EE1D8D493700D28D57 /* ObjectFetcher.swift */; };
 		2D1547DE1D883F7600CDF43B /* Fecosystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1547DD1D883F7600CDF43B /* Fecosystem.swift */; };
 		2D5929C31DAE63690037A20B /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5929C21DAE63690037A20B /* CacheManager.swift */; };
-		2D5929C51DAE7C770037A20B /* CacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5929C41DAE7C770037A20B /* CacheManagerTests.swift */; };
-		2D5929C81DB25C1C0037A20B /* ObjectProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5929C71DB25C1C0037A20B /* ObjectProviderTests.swift */; };
 		2D603E931D8953B0009F9731 /* SwinjectDefenitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D603E921D8953B0009F9731 /* SwinjectDefenitions.swift */; };
 		2D67139F1D8EC02000D3CFD7 /* ObjectSyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67139E1D8EC02000D3CFD7 /* ObjectSyncer.swift */; };
 		2D6DE6FE1D816EC000A2C667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6DE6FD1D816EC000A2C667 /* AppDelegate.swift */; };
@@ -27,11 +25,14 @@
 		2D6DE7321D8420B800A2C667 /* NewPooViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6DE7311D8420B800A2C667 /* NewPooViewController.xib */; };
 		2D6DE7331D8420B800A2C667 /* NewPooViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6DE7311D8420B800A2C667 /* NewPooViewController.xib */; };
 		2D7BF6A31D8833250013F723 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2D7BF6A21D8833250013F723 /* Podfile */; };
+		2D80DC761DC5C93D00DC3E7B /* SyncerQuerier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DC751DC5C93D00DC3E7B /* SyncerQuerier.swift */; };
+		2D80DC781DC5CA8500DC3E7B /* SyncerQuerierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DC771DC5CA8500DC3E7B /* SyncerQuerierTests.swift */; };
+		2D80DC7A1DC5E08300DC3E7B /* Realm+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DC791DC5E08200DC3E7B /* Realm+Testing.swift */; };
 		2D8A76C91DA4ED39007CB262 /* ObjectSaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A76C81DA4ED39007CB262 /* ObjectSaverTests.swift */; };
-		2D8A76CB1DA4F309007CB262 /* ObjectSyncerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A76CA1DA4F309007CB262 /* ObjectSyncerTests.swift */; };
 		2D8A76CD1DA79A45007CB262 /* FecosystemsObjectFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A76CC1DA79A45007CB262 /* FecosystemsObjectFetcher.swift */; };
 		2D8A76CF1DA79B62007CB262 /* FetchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A76CE1DA79B62007CB262 /* FetchResponse.swift */; };
 		2D95F41B1D8EECE200FA5F8A /* ObjectSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95F41A1D8EECE200FA5F8A /* ObjectSaver.swift */; };
+		2DAB0EF21DB8E7FA005DE8B0 /* Syncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB0EF11DB8E7FA005DE8B0 /* Syncer.swift */; };
 		2DC0CA301D88045700E6FCF6 /* HangdoggerBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0CA2F1D88045700E6FCF6 /* HangdoggerBackend.swift */; };
 		2DC0CA331D8809F500E6FCF6 /* NewPooViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0CA321D8809F500E6FCF6 /* NewPooViewModel.swift */; };
 		2DD027511D9806D1005CD1A9 /* FecosystemsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD027501D9806D1005CD1A9 /* FecosystemsResult.swift */; };
@@ -39,7 +40,6 @@
 		2DD0275A1D9A832C005CD1A9 /* SignalProducerType+ResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD027591D9A832B005CD1A9 /* SignalProducerType+ResultExtension.swift */; };
 		2DD0275C1D9A839F005CD1A9 /* Response+MappingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD0275B1D9A839F005CD1A9 /* Response+MappingExtensions.swift */; };
 		2DD0275E1D9A84DA005CD1A9 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD0275D1D9A84DA005CD1A9 /* BaseResult.swift */; };
-		2DD52CA31DAA3526000912CB /* ObjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD52CA21DAA3526000912CB /* ObjectProvider.swift */; };
 		3BD35BA8180A7D29D770E190 /* Pods_HangdoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93928F3CDD8A50D19129854B /* Pods_HangdoggerTests.framework */; };
 		7FCA014AECDA66C799388FF7 /* Pods_Hangdogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8466CE8D3FF40F872CF7264 /* Pods_Hangdogger.framework */; };
 /* End PBXBuildFile section */
@@ -74,8 +74,6 @@
 		2D0F90EE1D8D493700D28D57 /* ObjectFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectFetcher.swift; sourceTree = "<group>"; };
 		2D1547DD1D883F7600CDF43B /* Fecosystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fecosystem.swift; sourceTree = "<group>"; };
 		2D5929C21DAE63690037A20B /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
-		2D5929C41DAE7C770037A20B /* CacheManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManagerTests.swift; sourceTree = "<group>"; };
-		2D5929C71DB25C1C0037A20B /* ObjectProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProviderTests.swift; sourceTree = "<group>"; };
 		2D603E921D8953B0009F9731 /* SwinjectDefenitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectDefenitions.swift; sourceTree = "<group>"; };
 		2D67139E1D8EC02000D3CFD7 /* ObjectSyncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectSyncer.swift; sourceTree = "<group>"; };
 		2D6DE6FA1D816EC000A2C667 /* Hangdogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangdogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,11 +88,14 @@
 		2D6DE72E1D84209400A2C667 /* NewPooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPooViewController.swift; sourceTree = "<group>"; };
 		2D6DE7311D8420B800A2C667 /* NewPooViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPooViewController.xib; sourceTree = "<group>"; };
 		2D7BF6A21D8833250013F723 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2D80DC751DC5C93D00DC3E7B /* SyncerQuerier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncerQuerier.swift; sourceTree = "<group>"; };
+		2D80DC771DC5CA8500DC3E7B /* SyncerQuerierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncerQuerierTests.swift; sourceTree = "<group>"; };
+		2D80DC791DC5E08200DC3E7B /* Realm+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Testing.swift"; sourceTree = "<group>"; };
 		2D8A76C81DA4ED39007CB262 /* ObjectSaverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectSaverTests.swift; sourceTree = "<group>"; };
-		2D8A76CA1DA4F309007CB262 /* ObjectSyncerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectSyncerTests.swift; sourceTree = "<group>"; };
 		2D8A76CC1DA79A45007CB262 /* FecosystemsObjectFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FecosystemsObjectFetcher.swift; sourceTree = "<group>"; };
 		2D8A76CE1DA79B62007CB262 /* FetchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchResponse.swift; sourceTree = "<group>"; };
 		2D95F41A1D8EECE200FA5F8A /* ObjectSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectSaver.swift; sourceTree = "<group>"; };
+		2DAB0EF11DB8E7FA005DE8B0 /* Syncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Syncer.swift; sourceTree = "<group>"; };
 		2DC0CA2F1D88045700E6FCF6 /* HangdoggerBackend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangdoggerBackend.swift; sourceTree = "<group>"; };
 		2DC0CA321D8809F500E6FCF6 /* NewPooViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPooViewModel.swift; sourceTree = "<group>"; };
 		2DD027501D9806D1005CD1A9 /* FecosystemsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FecosystemsResult.swift; sourceTree = "<group>"; };
@@ -102,7 +103,6 @@
 		2DD027591D9A832B005CD1A9 /* SignalProducerType+ResultExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignalProducerType+ResultExtension.swift"; sourceTree = "<group>"; };
 		2DD0275B1D9A839F005CD1A9 /* Response+MappingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+MappingExtensions.swift"; sourceTree = "<group>"; };
 		2DD0275D1D9A84DA005CD1A9 /* BaseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
-		2DD52CA21DAA3526000912CB /* ObjectProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectProvider.swift; sourceTree = "<group>"; };
 		74EFA0796FB9FD7CFA9BD89C /* Pods-HangdoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangdoggerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HangdoggerTests/Pods-HangdoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8EF8C4F4584890883D8DBAFA /* Pods-HangdoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HangdoggerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HangdoggerTests/Pods-HangdoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		93928F3CDD8A50D19129854B /* Pods_HangdoggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HangdoggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				2D0F90EC1D8D39D000D28D57 /* ReactiveCocoaMoyaProviderExtensions.swift */,
+				2D80DC791DC5E08200DC3E7B /* Realm+Testing.swift */,
 				2DD027591D9A832B005CD1A9 /* SignalProducerType+ResultExtension.swift */,
 				2DD0275B1D9A839F005CD1A9 /* Response+MappingExtensions.swift */,
 			);
@@ -212,10 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				2D0A7FCF1DA13FF40036A5E0 /* FecosystemsObjectFetcherTests.swift */,
-				2D5929C71DB25C1C0037A20B /* ObjectProviderTests.swift */,
-				2D5929C41DAE7C770037A20B /* CacheManagerTests.swift */,
+				2D80DC771DC5CA8500DC3E7B /* SyncerQuerierTests.swift */,
 				2D8A76C81DA4ED39007CB262 /* ObjectSaverTests.swift */,
-				2D8A76CA1DA4F309007CB262 /* ObjectSyncerTests.swift */,
 			);
 			name = ModelsTests;
 			sourceTree = "<group>";
@@ -224,7 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				2DC0CA2F1D88045700E6FCF6 /* HangdoggerBackend.swift */,
-				2DD52CA21DAA3526000912CB /* ObjectProvider.swift */,
+				2DAB0EF11DB8E7FA005DE8B0 /* Syncer.swift */,
+				2D80DC751DC5C93D00DC3E7B /* SyncerQuerier.swift */,
 				2D5929C21DAE63690037A20B /* CacheManager.swift */,
 				2D0F90EE1D8D493700D28D57 /* ObjectFetcher.swift */,
 				2D8A76CE1DA79B62007CB262 /* FetchResponse.swift */,
@@ -491,16 +491,17 @@
 			files = (
 				2D67139F1D8EC02000D3CFD7 /* ObjectSyncer.swift in Sources */,
 				2D95F41B1D8EECE200FA5F8A /* ObjectSaver.swift in Sources */,
+				2DAB0EF21DB8E7FA005DE8B0 /* Syncer.swift in Sources */,
 				2DC0CA331D8809F500E6FCF6 /* NewPooViewModel.swift in Sources */,
 				2DD0275A1D9A832C005CD1A9 /* SignalProducerType+ResultExtension.swift in Sources */,
 				2DD0275C1D9A839F005CD1A9 /* Response+MappingExtensions.swift in Sources */,
-				2DD52CA31DAA3526000912CB /* ObjectProvider.swift in Sources */,
 				2DD027581D9A8094005CD1A9 /* MappingOperators.swift in Sources */,
 				2D8A76CD1DA79A45007CB262 /* FecosystemsObjectFetcher.swift in Sources */,
 				2D6DE72F1D84209400A2C667 /* NewPooViewController.swift in Sources */,
 				2D1547DE1D883F7600CDF43B /* Fecosystem.swift in Sources */,
 				2DD027511D9806D1005CD1A9 /* FecosystemsResult.swift in Sources */,
 				2D0D70A41DA7DC6C005B5EAD /* FecosystemsError.swift in Sources */,
+				2D80DC7A1DC5E08300DC3E7B /* Realm+Testing.swift in Sources */,
 				2D8A76CF1DA79B62007CB262 /* FetchResponse.swift in Sources */,
 				2D6DE6FE1D816EC000A2C667 /* AppDelegate.swift in Sources */,
 				2D0F90ED1D8D39D100D28D57 /* ReactiveCocoaMoyaProviderExtensions.swift in Sources */,
@@ -509,6 +510,7 @@
 				2DC0CA301D88045700E6FCF6 /* HangdoggerBackend.swift in Sources */,
 				2D0F90EF1D8D493700D28D57 /* ObjectFetcher.swift in Sources */,
 				2D603E931D8953B0009F9731 /* SwinjectDefenitions.swift in Sources */,
+				2D80DC761DC5C93D00DC3E7B /* SyncerQuerier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,12 +518,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D8A76CB1DA4F309007CB262 /* ObjectSyncerTests.swift in Sources */,
 				2D0A7FD01DA13FF40036A5E0 /* FecosystemsObjectFetcherTests.swift in Sources */,
 				2D0A7FD31DA16B160036A5E0 /* ReactiveCocoaMoyaProvider.swift in Sources */,
-				2D5929C81DB25C1C0037A20B /* ObjectProviderTests.swift in Sources */,
-				2D5929C51DAE7C770037A20B /* CacheManagerTests.swift in Sources */,
 				2D8A76C91DA4ED39007CB262 /* ObjectSaverTests.swift in Sources */,
+				2D80DC781DC5CA8500DC3E7B /* SyncerQuerierTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
