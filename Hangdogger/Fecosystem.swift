@@ -14,6 +14,7 @@ class Fecosystem: Object, Mappable, SyncableObject {
     dynamic var id = 0
     dynamic var name: String!
     dynamic var revision: Int = -1
+    var dirty: Bool = false
 
     //Impl. of Mappable protocol
     required convenience init?(map: Map) {

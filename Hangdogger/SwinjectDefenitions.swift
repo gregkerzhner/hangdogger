@@ -19,12 +19,6 @@ extension SwinjectStoryboard {
             return model
         }
 
-        /*
-        defaultContainer.register(ObjectFetcher.self, name: "FecosystemsObjectFetcher") {(r, argument: [String: Any]?) in
-            let backend = r.resolve(ReactiveCocoaMoyaProvider<HangdoggerBackend>.self)!
-            return FecosystemObjectFetcher(backend: backend, params: argument)
-        }
-        */
         defaultContainer.register(ObjectSaver.self) { r in
             let realm = r.resolve(Realm.self)!
             return ObjectSaverImpl(realm: realm)

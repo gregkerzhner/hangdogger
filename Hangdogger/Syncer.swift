@@ -11,13 +11,10 @@ import ReactiveSwift
 import RealmSwift
 import Moya
 import ObjectMapper
+import Result
 
 protocol FetcherResponse: Mappable {
     var syncableObjects: [SyncableObject] {get}
-}
-
-protocol SyncableObject {
-    var revision: Int {get set}
 }
 
 protocol Fetcher {
@@ -38,18 +35,15 @@ class FecosystemFetcher: Fetcher {
 }
 
 protocol SyncResponse {
-
+    var syncableObjects: [SyncableObject] {get}
 }
 
+struct SyncerResponseImpl: SyncResponse {
+    let syncableObjects: [SyncableObject]
+}
 protocol Syncer {
     func sync() ->  SignalProducer<SyncResponse, SyncError>
 }
-
-protocol FetchResolver {
-    //If doesn't exist, just add it. If does exist, then check if its dirty.  If not dirty, just replace.  if is dirty, then need conflict resolution
-    func resolve(querier: SyncerQuerier, response: FetcherResponse) -> SignalProducer<SyncResponse, SyncError>
-}
-
 
 class SyncerImpl {
     let querier: SyncerQuerier
@@ -71,7 +65,7 @@ class SyncerImpl {
         fetch.mapError { error -> SyncError in
             return SyncError.fetchingError(error)
         }//the fetch resolver is going to compare this new list with the existing list
-        .flatMap(.latest) { (response: FetcherResponse) -> SignalProducer<SyncResponse, SyncError> in
+        .flatMap(.latest) { (response: FetcherResponse) -> SignalProducer<ResolverResponse, NoError> in
             return self.fetchResolver.resolve(querier: self.querier, response: response)
         }//TODO: .uploadChanges().cleanDeleted()
 
