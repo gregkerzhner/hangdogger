@@ -11,7 +11,7 @@ import RealmSwift
 
 protocol SyncerQuerier {
     var objects: [SyncableObject] {get}
-    var lastRevision: Int {get}
+    var lastRevision: Int? {get}
 }
 
 protocol SyncerQuerierRequest {
@@ -25,39 +25,26 @@ struct SyncerQuerierRequestImpl: SyncerQuerierRequest {
 }
 
 class SyncerQuerierImpl<T>: SyncerQuerier where T : SyncableObject, T: Object {
-    let request: SyncerQuerierRequest
-    let realm: Realm
+    private let request: SyncerQuerierRequest
+    private let realm: Realm
     init(request: SyncerQuerierRequest, realm: Realm) {
         self.request = request
         self.realm = realm
     }
 
+    private var objectsList: Results<T> {
+        var objs = self.realm.objects(T.self)
+        if let predicate = request.predicate {
+            objs = objs.filter(predicate)
+        }
+
+        return objs
+    }
     var objects: [SyncableObject] {
-        return Array(self.realm.objects(T.self))
+        return Array(self.objectsList)
     }
 
-    var lastRevision: Int {
-        return 0
+    var lastRevision: Int? {
+        return self.objectsList.sorted(byProperty: "revision", ascending: false).first?.revision
     }
 }
-
-/*
-class SyncerQuerierImpl: SyncerQuerier{
-    let request: SyncerQuerierRequest
-    let realm: Realm
-    init(request: SyncerQuerierRequest, realm: Realm) {
-        self.request = request
-        self.realm = realm
-    }
-
-    var objects: [SyncableObject] {
-        return Array(self.realm.objects(self.request.object))
-        //self.realm.objects(<#T##type: T.Type##T.Type#>)
-        //return [SyncableObject]()
-    }
-
-    var lastRevision: Int {
-        return 0
-    }
-}
-*/
